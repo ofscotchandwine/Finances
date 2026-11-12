@@ -92,21 +92,12 @@
           "presupuesto": 0
         }
       ],
-      "variables": [
-        {
-          "id": "ezlt7ra",
-          "fecha": "2026-11-12",
-          "descripcion": "",
-          "categoria": "Transporte",
-          "medio": "",
-          "valor": 400000
-        }
-      ],
+      "variables": [],
       "ahorro": {
         "presupuesto": 0,
         "real": 0
       }
     }
   },
-  "actualizado": "2026-11-12T20:58:19.608Z"
+  "actualizado": "2026-11-12T20:58:27.055Z"
 }
