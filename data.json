@@ -34,47 +34,8 @@
   "meses": {
     "2026-11": {
       "saldoInicial": 0,
-      "ingresos": [
-        {
-          "id": "i1",
-          "nombre": "Mami Ini",
-          "esperado": 0,
-          "recibido": 0,
-          "dia": 1
-        },
-        {
-          "id": "i2",
-          "nombre": "Madre",
-          "esperado": 0,
-          "recibido": 3000000,
-          "dia": 1
-        },
-        {
-          "id": "i3",
-          "nombre": "Padre",
-          "esperado": 0,
-          "recibido": 0,
-          "dia": 1
-        }
-      ],
-      "fijos": [
-        {
-          "id": "ysr381h",
-          "nombre": "Universidad",
-          "categoria": "Educación",
-          "presupuesto": 0,
-          "pagado": 0,
-          "dia": 10
-        },
-        {
-          "id": "5gou6sn",
-          "nombre": "",
-          "categoria": "",
-          "presupuesto": 0,
-          "pagado": 0,
-          "dia": 1
-        }
-      ],
+      "ingresos": [],
+      "fijos": [],
       "suscripciones": [
         {
           "id": "s1",
@@ -147,5 +108,5 @@
       }
     }
   },
-  "actualizado": "2026-11-12T20:56:45.774Z"
+  "actualizado": "2026-11-12T20:58:19.608Z"
 }
