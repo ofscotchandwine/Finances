@@ -2,10 +2,35 @@
   "version": 1,
   "categorias": [
     "Suscripciones",
-    "Transporte"
+    "Transporte",
+    "Educación"
   ],
-  "metas": [],
-  "tarjetas": [],
+  "metas": [
+    {
+      "id": "57vxdf8",
+      "nombre": "Fondo de emergencia",
+      "actual": 0,
+      "objetivo": 0
+    }
+  ],
+  "tarjetas": [
+    {
+      "id": "di0sauk",
+      "nombre": "Master",
+      "cupo": 0,
+      "deuda": 0,
+      "corte": 30,
+      "pago": 15
+    },
+    {
+      "id": "0oq44em",
+      "nombre": "Credito casa",
+      "cupo": 0,
+      "deuda": 0,
+      "corte": 0,
+      "pago": 0
+    }
+  ],
   "meses": {
     "2026-11": {
       "saldoInicial": 0,
@@ -21,7 +46,7 @@
           "id": "i2",
           "nombre": "Madre",
           "esperado": 0,
-          "recibido": 0,
+          "recibido": 3000000,
           "dia": 1
         },
         {
@@ -32,7 +57,24 @@
           "dia": 1
         }
       ],
-      "fijos": [],
+      "fijos": [
+        {
+          "id": "ysr381h",
+          "nombre": "Universidad",
+          "categoria": "Educación",
+          "presupuesto": 0,
+          "pagado": 0,
+          "dia": 10
+        },
+        {
+          "id": "5gou6sn",
+          "nombre": "",
+          "categoria": "",
+          "presupuesto": 0,
+          "pagado": 0,
+          "dia": 1
+        }
+      ],
       "suscripciones": [
         {
           "id": "s1",
@@ -89,11 +131,21 @@
           "presupuesto": 0
         }
       ],
-      "variables": [],
+      "variables": [
+        {
+          "id": "ezlt7ra",
+          "fecha": "2026-11-12",
+          "descripcion": "",
+          "categoria": "Transporte",
+          "medio": "",
+          "valor": 400000
+        }
+      ],
       "ahorro": {
         "presupuesto": 0,
         "real": 0
       }
     }
-  }
+  },
+  "actualizado": "2026-11-12T20:56:45.774Z"
 }
