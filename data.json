@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "categorias": [
+    "Suscripciones",
+    "Transporte"
+  ],
+  "metas": [],
+  "tarjetas": [],
+  "meses": {
+    "2026-11": {
+      "saldoInicial": 0,
+      "ingresos": [
+        {
+          "id": "i1",
+          "nombre": "Mami Ini",
+          "esperado": 0,
+          "recibido": 0,
+          "dia": 1
+        },
+        {
+          "id": "i2",
+          "nombre": "Madre",
+          "esperado": 0,
+          "recibido": 0,
+          "dia": 1
+        },
+        {
+          "id": "i3",
+          "nombre": "Padre",
+          "esperado": 0,
+          "recibido": 0,
+          "dia": 1
+        }
+      ],
+      "fijos": [],
+      "suscripciones": [
+        {
+          "id": "s1",
+          "nombre": "Apple",
+          "valor": 0,
+          "dia": 1,
+          "nota": "",
+          "activa": true
+        },
+        {
+          "id": "s2",
+          "nombre": "Google One",
+          "valor": 20000,
+          "dia": 1,
+          "nota": "",
+          "activa": true
+        },
+        {
+          "id": "s3",
+          "nombre": "Spotify",
+          "valor": 0,
+          "dia": 1,
+          "nota": "",
+          "activa": true
+        },
+        {
+          "id": "s4",
+          "nombre": "Apple TV",
+          "valor": 0,
+          "dia": 1,
+          "nota": "",
+          "activa": true
+        },
+        {
+          "id": "s5",
+          "nombre": "Disney",
+          "valor": 45000,
+          "dia": 1,
+          "nota": "",
+          "activa": true
+        },
+        {
+          "id": "s6",
+          "nombre": "Chat GPT",
+          "valor": 15000,
+          "dia": 1,
+          "nota": "Valor total $99.000, entre 7",
+          "activa": true
+        }
+      ],
+      "categorias": [
+        {
+          "nombre": "Transporte",
+          "presupuesto": 0
+        }
+      ],
+      "variables": [],
+      "ahorro": {
+        "presupuesto": 0,
+        "real": 0
+      }
+    }
+  }
+}
