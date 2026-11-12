@@ -2,36 +2,39 @@
   "version": 1,
   "categorias": [
     "Suscripciones",
-    "Transporte"
+    "Transporte",
+    "Educación"
   ],
-  "metas": [],
-  "tarjetas": [],
+  "metas": [
+    {
+      "id": "57vxdf8",
+      "nombre": "Fondo de emergencia",
+      "actual": 0,
+      "objetivo": 0
+    }
+  ],
+  "tarjetas": [
+    {
+      "id": "di0sauk",
+      "nombre": "Master",
+      "cupo": 0,
+      "deuda": 0,
+      "corte": 30,
+      "pago": 15
+    },
+    {
+      "id": "0oq44em",
+      "nombre": "Credito casa",
+      "cupo": 0,
+      "deuda": 0,
+      "corte": 0,
+      "pago": 0
+    }
+  ],
   "meses": {
     "2026-11": {
       "saldoInicial": 0,
-      "ingresos": [
-        {
-          "id": "i1",
-          "nombre": "Mami Ini",
-          "esperado": 0,
-          "recibido": 0,
-          "dia": 1
-        },
-        {
-          "id": "i2",
-          "nombre": "Madre",
-          "esperado": 0,
-          "recibido": 0,
-          "dia": 1
-        },
-        {
-          "id": "i3",
-          "nombre": "Padre",
-          "esperado": 0,
-          "recibido": 0,
-          "dia": 1
-        }
-      ],
+      "ingresos": [],
       "fijos": [],
       "suscripciones": [
         {
@@ -95,5 +98,6 @@
         "real": 0
       }
     }
-  }
+  },
+  "actualizado": "2026-11-12T21:06:20.290Z"
 }
