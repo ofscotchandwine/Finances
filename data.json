@@ -3,7 +3,8 @@
   "categorias": [
     "Suscripciones",
     "Transporte",
-    "Educación"
+    "Educación",
+    "Casa"
   ],
   "tarjetas": [
     {
@@ -82,12 +83,16 @@
         {
           "nombre": "Transporte",
           "presupuesto": 0
+        },
+        {
+          "nombre": "Casa",
+          "presupuesto": 0
         }
       ],
       "variables": []
     }
   },
-  "actualizado": "2026-11-13T01:14:43.167Z",
+  "actualizado": "2026-11-13T01:26:35.208Z",
   "ahorros": [
     {
       "id": "hsn6ute",
