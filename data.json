@@ -89,10 +89,19 @@
           "presupuesto": 0
         }
       ],
-      "variables": []
+      "variables": [
+        {
+          "id": "cquz5hh",
+          "fecha": "2026-11-01",
+          "descripcion": "Estante IKEA",
+          "categoria": "Casa",
+          "medio": "di0sauk",
+          "valor": 79000
+        }
+      ]
     }
   },
-  "actualizado": "2026-11-13T01:26:35.208Z",
+  "actualizado": "2026-11-13T01:27:35.933Z",
   "ahorros": [
     {
       "id": "hsn6ute",
