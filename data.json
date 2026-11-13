@@ -141,7 +141,7 @@
       ]
     }
   },
-  "actualizado": "2026-11-13T03:07:38.196Z",
+  "actualizado": "2026-11-13T03:07:56.996Z",
   "ahorros": [
     {
       "id": "hsn6ute",
@@ -158,6 +158,12 @@
     {
       "id": "grchjfh",
       "fecha": "2026-11-12",
+      "valor": 5000000,
+      "nota": "Uni"
+    },
+    {
+      "id": "t6taebm",
+      "fecha": "2026-10-26",
       "valor": 5000000,
       "nota": "Uni"
     }
