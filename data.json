@@ -87,13 +87,19 @@
       "variables": []
     }
   },
-  "actualizado": "2026-11-13T01:14:28.772Z",
+  "actualizado": "2026-11-13T01:14:43.167Z",
   "ahorros": [
     {
       "id": "hsn6ute",
       "fecha": "2026-11-12",
       "valor": 5000000,
       "nota": "Uni"
+    },
+    {
+      "id": "rnhn7k1",
+      "fecha": "2026-11-12",
+      "valor": 500000,
+      "nota": "Abonos casa"
     }
   ]
 }
