@@ -12,7 +12,6 @@
       "id": "di0sauk",
       "nombre": "Master",
       "cupo": 0,
-      "deuda": 0,
       "corte": 30,
       "pago": 15
     },
@@ -20,7 +19,6 @@
       "id": "0oq44em",
       "nombre": "Credito casa",
       "cupo": 8500000,
-      "deuda": 8500000,
       "corte": 1,
       "pago": 16
     }
@@ -28,14 +26,35 @@
   "meses": {
     "2026-11": {
       "saldoInicial": 0,
-      "ingresos": [],
+      "ingresos": [
+        {
+          "id": "rwexpol",
+          "nombre": "Mami ini",
+          "esperado": 1300000,
+          "recibido": 1300000,
+          "dia": 1
+        },
+        {
+          "id": "21ekd88",
+          "nombre": "Madre",
+          "esperado": 3000000,
+          "recibido": 3000000,
+          "dia": 1
+        },
+        {
+          "id": "vem0tfo",
+          "nombre": "Papá",
+          "esperado": 100000,
+          "recibido": 100000,
+          "dia": 1
+        }
+      ],
       "fijos": [
         {
           "id": "ycyvskv",
           "nombre": "Cuota de manejo master",
           "categoria": "TC",
           "presupuesto": 18495,
-          "pagado": 0,
           "dia": 16
         },
         {
@@ -43,7 +62,6 @@
           "nombre": "",
           "categoria": "",
           "presupuesto": 0,
-          "pagado": 0,
           "dia": 1
         }
       ],
@@ -123,7 +141,7 @@
       ]
     }
   },
-  "actualizado": "2026-11-13T01:32:57.282Z",
+  "actualizado": "2026-11-13T03:07:38.196Z",
   "ahorros": [
     {
       "id": "hsn6ute",
@@ -136,6 +154,12 @@
       "fecha": "2026-11-12",
       "valor": 500000,
       "nota": "Abonos casa"
+    },
+    {
+      "id": "grchjfh",
+      "fecha": "2026-11-12",
+      "valor": 5000000,
+      "nota": "Uni"
     }
   ]
 }
