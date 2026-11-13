@@ -21,7 +21,7 @@
 }
 *{box-sizing:border-box}
 /* Sobre 1536 px de ancho todo crece en proporción a la ventana. */
-html{-webkit-text-size-adjust:100%;font-size:clamp(16px,1.0417vw,40px)}
+html{-webkit-text-size-adjust:100%;font-size:clamp(17.5px,1.14vw,44px)}
 body{margin:0;font-family:var(--sans);font-size:0.8438rem;line-height:1.45;color:var(--ink);
   background:
     radial-gradient(56.25rem 31.25rem at 8% -10%,#F3F9EF 0%,transparent 60%),
@@ -34,8 +34,8 @@ a{color:var(--g700)}
 .num{font-variant-numeric:tabular-nums}
 
 /* ---------- layout ---------- */
-.app{padding:1.25rem;display:grid;grid-template-columns:14.75rem minmax(0,1fr);gap:1rem}
-.top{grid-column:1/-1;display:grid;grid-template-columns:14.75rem auto repeat(3,minmax(0,1fr));gap:1rem;align-items:stretch}
+.app{padding:2rem 2.75rem 3rem;display:grid;grid-template-columns:14.75rem minmax(0,1fr);gap:1.125rem}
+.top{grid-column:1/-1;display:grid;grid-template-columns:14.75rem repeat(3,minmax(0,1fr));gap:1.125rem;align-items:stretch}
 .side{display:flex;flex-direction:column;gap:1rem;min-width:0}
 main{min-width:0}
 .card{background:var(--card);border-radius:var(--r);padding:1.125rem 1.125rem 1rem;box-shadow:0 1px 0 #fff inset,0 0.5rem 1.5rem -18px rgba(18,59,42,.35);border:1px solid rgba(255,255,255,.7)}
@@ -49,10 +49,6 @@ main{min-width:0}
 /* ---------- header ---------- */
 .brand{display:flex;flex-direction:column;justify-content:center;padding:0.375rem 0.375rem 0.375rem 0.5rem;text-decoration:none;border-radius:0.75rem}
 .brand h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.6875rem;color:var(--g700);line-height:1.1}
-.clock{display:flex;gap:0.375rem;align-items:center}
-.clock b{position:relative;display:grid;place-items:center;width:3.875rem;height:4.125rem;border-radius:0.875rem;background:var(--g900);color:#F4FBF3;font-weight:600;font-size:1.9375rem;letter-spacing:.5px;font-variant-numeric:tabular-nums;box-shadow:0 0.625rem 1.125rem -12px rgba(18,59,42,.7)}
-.clock b::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.09)}
-.clock small{position:absolute;top:0.3125rem;left:0.5rem;font-size:0.5rem;font-weight:600;letter-spacing:.8px;opacity:.75}
 .kpi{display:flex;flex-direction:column;justify-content:center;gap:0.375rem;padding:0.75rem 1rem;min-width:0}
 .kpi .row{display:flex;align-items:center;gap:0.5rem;min-width:0}
 .kpi svg{flex:none;width:1.625rem;height:1.625rem;padding:0.3125rem;border-radius:0.5625rem;background:var(--g100);color:var(--g700)}
@@ -84,7 +80,7 @@ main{min-width:0}
 
 /* ---------- dashboard grid ---------- */
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1rem}
-.c3{grid-column:span 3}.c4{grid-column:span 4}.c8{grid-column:span 8}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c8{grid-column:span 8}
 .view{animation:fade 180ms var(--ease-out)}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 .first .grid>.card{animation:rise 260ms var(--ease-out) both;animation-delay:calc(var(--i,0)*45ms)}
@@ -204,6 +200,19 @@ input[type=date].in{-webkit-appearance:none;appearance:none;display:block;text-a
 .list .li.tot{border-top:1px solid var(--line);padding-top:0.5625rem;font-weight:600}
 .eye{border:0;background:transparent;width:1.875rem;height:1.875rem;margin:-6px -4px -6px 0;border-radius:0.5625rem;display:grid;place-items:center;color:var(--ink2);transition:transform 140ms var(--ease-out),background-color 140ms}
 .eye:active{transform:scale(.94)}
+.ed th.ck,.ed td.ck{text-align:center;width:4.25rem;padding-left:0}
+.hechos{margin-top:0.875rem;border-top:1px solid var(--line);padding-top:0.625rem}
+.hechos summary{font-weight:500;margin:0 0 0.5rem}
+.hechos .in,.hechos .money{opacity:.7}
+.h3{display:flex;justify-content:space-between;align-items:baseline;gap:0.5rem;font-size:0.6875rem;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin:1.125rem 0 0.375rem}
+.lnk{border:0;background:none;padding:0;font-size:0.75rem;font-weight:500;color:var(--g700);text-decoration:underline;text-transform:none;letter-spacing:0}
+.cargos{display:flex;flex-direction:column}
+.cargo{display:grid;grid-template-columns:1.25rem 5.25rem minmax(0,1fr) auto;gap:0.625rem;align-items:center;padding:0.5rem 0;font-size:0.8125rem;cursor:pointer}
+.cargo+.cargo{border-top:1px solid var(--line)}
+.cargo .f{color:var(--muted);font-size:0.75rem}
+.cargo .d{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hechos .cargo .d,.hechos .cargo .num{color:var(--muted);text-decoration:line-through}
+.addnote{margin-top:0.625rem}
 .eye svg{width:1.125rem;height:1.125rem}
 .status{font-size:0.75rem;color:var(--ink2)}
 .status.ok{color:var(--g700)}.status.err{color:var(--warn)}
@@ -241,33 +250,39 @@ details summary{cursor:pointer;font-size:0.75rem;color:var(--ink2);margin:0.25re
 :focus-visible{outline:2px solid var(--g500);outline-offset:2px}
 .in:focus-visible{outline:none}
 
+@media (max-width:1400px){
+  .m4{grid-column:span 4}.m6{grid-column:span 6}.m12{grid-column:span 12}
+}
 @media (max-width:1240px){
   .top{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .top .brand{grid-column:span 2}.top .clock{justify-self:end}
-  .c3,.c4{grid-column:span 6}.c8{grid-column:span 12}
+  .top .brand{grid-column:1/-1}
+  .app{padding:1.5rem 1.75rem 2.5rem}
   .addrow{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:1100px){
   .split{grid-template-columns:minmax(0,1fr)}
   .stack.lead{order:-1}
+  .m4{grid-column:span 6}.s12{grid-column:span 12}
 }
 @media (max-width:860px){
-  .app{grid-template-columns:minmax(0,1fr);padding:0.875rem;gap:0.75rem}
+  .app{grid-template-columns:minmax(0,1fr);padding:1.125rem 1.125rem 2rem;gap:0.75rem}
   .top{grid-template-columns:repeat(2,minmax(0,1fr));gap:0.75rem}
-  .top .brand{grid-column:1}.top .clock{grid-column:2}
+  .top .brand{grid-column:1/-1}
   .top .kpi:last-child{grid-column:1/-1}
   .split{grid-template-columns:minmax(0,1fr)}
-  .clock b{width:3.125rem;height:3.375rem;font-size:1.5625rem}
   .brand h1{font-size:1.4375rem}
   .cal-grid,.hoy{display:none}
   .cal{padding:0.625rem 0.875rem}.cal .label{display:none}.cal-head{margin:0}
   .nav{padding:0.5rem}.nav .label,.sync{display:none}
   .nav ul{flex-direction:row;overflow-x:auto;margin:0;gap:0.25rem;scrollbar-width:none}
   .nav ul a{white-space:nowrap}
-  .grid{gap:0.75rem}.c3,.c4,.c8{grid-column:span 12}
+  .grid{gap:0.75rem}.c3,.c4,.c5,.c8,.m4,.m6,.m12{grid-column:span 12}
   .addrow{grid-template-columns:1fr 1fr}
   .addrow .btn{grid-column:1/-1}
   .kpi strong{font-size:1.0625rem}
+}
+@media (max-width:520px){
+  .sum th:nth-child(4),.sum td:nth-child(4){display:none}
 }
 @media (prefers-reduced-motion:reduce){
   .view,.first .grid>.card{animation:none}
@@ -280,7 +295,6 @@ details summary{cursor:pointer;font-size:0.75rem;color:var(--ink2);margin:0.25re
 <div class="app">
   <header class="top">
     <a class="brand" href="#panel" aria-label="Mis finanzas: ir al panel"><h1>Mis finanzas</h1></a>
-    <div class="clock" id="clock" aria-label="Hora actual"></div>
     <div class="card kpi" data-zone="kpi" data-arg="0"></div>
     <div class="card kpi" data-zone="kpi" data-arg="1"></div>
     <div class="card kpi" data-zone="kpi" data-arg="2"></div>
@@ -338,7 +352,7 @@ const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto"
 const VISTAS = [["panel","Panel"],["ingresos","Ingresos"],["fijos","Gastos fijos"],["suscripciones","Suscripciones"],["variables","Gastos variables"],["tarjetas","Tarjetas de crédito"],["ahorros","Ahorros"],["ajustes","Ajustes"]];
 const CFG_KEY = "finanzas-cfg", UI_KEY = "finanzas-ui";
 
-const S = { data: null, mes: ym(new Date()), vista: "panel", dirty: false, saving: false, virtual: {}, cfg: {}, fuente: "local", fechaNueva: null, primera: true, estado: null, ui: { ocultarTC: false } };
+const S = { data: null, mes: ym(new Date()), vista: "panel", dirty: false, saving: false, virtual: {}, cfg: {}, fuente: "local", fechaNueva: null, primera: true, estado: null, ui: { ocultarTC: false }, abiertos: {} };
 
 /* ---------- utilidades ---------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -379,8 +393,12 @@ function normalizar(d) {
       if (n0(m.ahorro.real) > 0) d.ahorros.push({ id: uid(), fecha: k + "-01", valor: n0(m.ahorro.real), nota: "Ahorro de " + nombreMes(k) });
       delete m.ahorro;
     }
+    m.fijos.forEach(f => {                         // versión anterior: "pagado" era un monto; ahora es una casilla
+      if ("pagado" in f) { const p = n0(f.pagado); if (p > 0) { f.presupuesto = p; f.ok = true; } delete f.pagado; }
+    });
     d.meses[k] = m;
   }
+  d.tarjetas.forEach(t => { delete t.deuda; });      // la deuda ya no se escribe: sale de los gastos con tarjeta sin pagar
   if (Array.isArray(d.metas)) {                    // versión anterior: metas con lo ahorrado en cada una
     d.metas.forEach(g => { if (n0(g.actual) > 0) d.ahorros.push({ id: uid(), fecha: ymd(new Date()), valor: n0(g.actual), nota: g.nombre || "Meta" }); });
     delete d.metas;
@@ -390,13 +408,15 @@ function normalizar(d) {
 /* Un mes que todavía no existe se muestra como copia del anterior (sin lo recibido ni lo gastado)
    y solo se guarda de verdad cuando se edita algo en él. */
 function plantilla(key) {
-  const keys = Object.keys(S.data.meses).sort();
-  const prev = keys.filter(k => k < key).pop() || keys[0];
-  const m = mesVacio();
-  if (!prev) return m;
+  const keys = Object.keys(S.data.meses).sort(), prev = keys.filter(k => k < key).pop(), m = mesVacio();
+  if (!keys.length) return m;
+  if (!prev) {                                     // un mes anterior a todos los guardados empieza vacío (solo las categorías)
+    m.categorias = S.data.meses[keys[0]].categorias.map(x => ({ nombre: x.nombre, presupuesto: 0 }));
+    return m;
+  }
   const b = S.data.meses[prev];
   m.ingresos = b.ingresos.map(x => ({ ...x, id: uid(), recibido: 0 }));
-  m.fijos = b.fijos.map(x => ({ ...x, id: uid(), pagado: 0 }));
+  m.fijos = b.fijos.map(x => ({ ...x, id: uid(), ok: false }));
   m.suscripciones = b.suscripciones.map(x => ({ ...x, id: uid() }));
   m.categorias = b.categorias.map(x => ({ ...x }));
   if (prev === mover(key, -1)) m.saldoInicial = calc(b).saldoR;
@@ -406,14 +426,31 @@ function mes() {
   if (S.data.meses[S.mes]) return S.data.meses[S.mes];
   return S.virtual[S.mes] || (S.virtual[S.mes] = plantilla(S.mes));
 }
-function mesEditable() {
-  if (!S.data.meses[S.mes]) { S.data.meses[S.mes] = mes(); delete S.virtual[S.mes]; }
-  return S.data.meses[S.mes];
+function mesDe(key) {
+  if (!S.data.meses[key]) { S.data.meses[key] = S.virtual[key] || plantilla(key); delete S.virtual[key]; }
+  return S.data.meses[key];
+}
+function mesEditable() { return mesDe(S.mes); }
+/* Un gasto variable vive en el mes de su fecha: si la fecha se cambió a otro mes, se pasa allá. */
+function reubicar() {
+  const m = S.data.meses[S.mes]; if (!m) return 0;
+  let n = 0;
+  for (let i = m.variables.length - 1; i >= 0; i--) {
+    const k = String(m.variables[i].fecha || "").slice(0, 7);
+    if (/^\d{4}-\d{2}$/.test(k) && k !== S.mes) { mesDe(k).variables.push(m.variables.splice(i, 1)[0]); n++; }
+  }
+  return n;
+}
+/* Compras hechas con una tarjeta, en cualquier mes. La deuda es la suma de las que no se han marcado como pagadas. */
+function cargosTC(id) {
+  const out = [];
+  for (const key of Object.keys(S.data.meses)) S.data.meses[key].variables.forEach((v, i) => { if (v.medio === id) out.push({ v, key, i }); });
+  return out.sort((a, b) => String(b.v.fecha).localeCompare(String(a.v.fecha)));
 }
 function activas(m) { return m.suscripciones.filter(s => s.activa !== false); }
 function calc(m) {
   const ingP = sum(m.ingresos, x => x.esperado), ingR = sum(m.ingresos, x => x.recibido);
-  const fijP = sum(m.fijos, x => x.presupuesto), fijR = sum(m.fijos, x => x.pagado);
+  const fijP = sum(m.fijos, x => x.presupuesto), fijR = sum(m.fijos.filter(x => x.ok), x => x.presupuesto);
   const sub = sum(activas(m), x => x.valor);
   const varP = sum(m.categorias, x => x.presupuesto), varR = sum(m.variables, x => x.valor);
   const gasP = fijP + sub + varP, gasR = fijR + sub + varR;
@@ -428,7 +465,7 @@ function porCategoria(m) {
   const map = new Map();
   const add = (k, v) => { if (n0(v) > 0) map.set(k, (map.get(k) || 0) + n0(v)); };
   add("Suscripciones", sum(activas(m), x => x.valor));
-  m.fijos.forEach(f => add(f.categoria || "Gastos fijos", f.pagado));
+  m.fijos.forEach(f => add(f.categoria || "Gastos fijos", f.ok ? f.presupuesto : 0));
   m.variables.forEach(v => add(v.categoria || "Otros", v.valor));
   const items = [...map].map(([nombre, valor]) => ({ nombre, valor, color: colorCat(nombre) }));
   const propios = items.filter(i => i.color !== GRIS), otros = items.filter(i => i.color === GRIS);
@@ -442,7 +479,7 @@ function serieDiaria(m, key) {
   const N = diasDe(key), mov = new Array(N + 1).fill(0);
   const dia = d => Math.min(N, Math.max(1, Math.round(n0(d)) || 1));
   m.ingresos.forEach(x => mov[dia(x.dia)] += n0(x.recibido));
-  m.fijos.forEach(x => mov[dia(x.dia)] -= n0(x.pagado));
+  m.fijos.forEach(x => mov[dia(x.dia)] -= x.ok ? n0(x.presupuesto) : 0);
   activas(m).forEach(x => mov[dia(x.dia)] -= n0(x.valor));
   m.variables.forEach(x => mov[dia(String(x.fecha || "").slice(8, 10))] -= n0(x.valor));
   const hoy = new Date(), fin = key === ym(hoy) ? hoy.getDate() : N;
@@ -458,7 +495,7 @@ function chartBarras(c) {
   const g = [["Ingresos", c.ingP, c.ingR], ["Gastos", c.gasP, c.gasR]];
   const max = Math.max(...g.flatMap(x => [x[1], x[2]]));
   if (max <= 0) return `<div class="empty">Cuando registres montos, aquí verás lo planeado frente a lo real.</div>`;
-  const W = 360, H = 190, L = 44, B = 24, T = 8, top = techo(max), ph = H - B - T, bw = 30, gw = (W - L) / g.length;
+  const W = 270, H = 200, L = 40, B = 24, T = 8, top = techo(max), ph = H - B - T, bw = 30, gw = (W - L) / g.length;
   const y = v => T + ph - (v / top) * ph;
   let s = "";
   for (const f of [0, .5, 1]) s += `<line x1="${L}" x2="${W}" y1="${y(top * f)}" y2="${y(top * f)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(top * f) + 3}" text-anchor="end">${abr(top * f)}</text>`;
@@ -534,15 +571,15 @@ function opcionesCat(m, actual) {
 function opcionesMedio(actual) {
   return `<option value="">Efectivo/débito</option>` + S.data.tarjetas.map(t => `<option value="${esc(t.id)}"${t.id === actual ? " selected" : ""}>${esc(t.nombre || "Tarjeta")}</option>`).join("");
 }
-function tarjetaVisual(t, m, oculto) {
-  const cupo = n0(t.cupo), deuda = n0(t.deuda), uso = cupo > 0 ? deuda / cupo : 0;
-  const delMes = sum(m.variables.filter(v => v.medio === t.id), v => v.valor);
+function tarjetaVisual(t, oculto) {
+  const pend = cargosTC(t.id).filter(c => !c.v.pagadoTC), deuda = sum(pend, c => c.v.valor);
+  const cupo = n0(t.cupo), uso = cupo > 0 ? deuda / cupo : 0;
   const corte = `Corte: día ${n0(t.corte) || "—"} · Pago: día ${n0(t.pago) || "—"}`;
   if (oculto) return `<div class="cc"><div class="n"><span>${esc(t.nombre || "Tarjeta")}</span></div>
-    <div class="d" aria-label="Valor oculto">••••••</div><div class="s">Deuda actual</div>${meter(0)}<div class="s">${corte}</div></div>`;
+    <div class="d" aria-label="Valor oculto">••••••</div><div class="s">Deuda</div>${meter(0)}<div class="s">${corte}</div></div>`;
   return `<div class="cc"><div class="n"><span>${esc(t.nombre || "Tarjeta")}</span><span>${cupo > 0 ? pct(uso) + " usado" : ""}</span></div>
-    <div class="d num">${fmt(deuda)}</div><div class="s">Deuda actual${cupo > 0 ? " · disponible " + fmt(cupo - deuda) : ""}</div>
-    ${meter(uso)}<div class="s">${corte}${delMes ? " · Este mes: " + fmt(delMes) : ""}</div></div>`;
+    <div class="d num">${fmt(deuda)}</div><div class="s">Deuda${cupo > 0 ? " · disponible " + fmt(cupo - deuda) : ""}</div>
+    ${meter(uso)}<div class="s">${corte} · ${pend.length} ${pend.length === 1 ? "compra" : "compras"} sin pagar</div></div>`;
 }
 
 /* ---------- zonas calculadas (se refrescan sin tocar los campos que se están editando) ---------- */
@@ -554,7 +591,7 @@ const Z = {
     return `<div class="row">${k[2]}<span class="label">${k[0]}</span></div><strong class="num${k[1] < 0 ? " neg" : ""}">${fmt(k[1])}</strong>`;
   },
   totIngresos() { const c = calc(mes()); return stat("Esperado", fmt(c.ingP)) + stat("Recibido", fmt(c.ingR)) + stat("Falta por recibir", fmt(Math.max(0, c.ingP - c.ingR))); },
-  totFijos() { const c = calc(mes()); return stat("Presupuesto", fmt(c.fijP)) + stat("Pagado", fmt(c.fijR)) + stat("Pendiente", fmt(Math.max(0, c.fijP - c.fijR))); },
+  totFijos() { const c = calc(mes()); return stat("Total del mes", fmt(c.fijP)) + stat("Pagado", fmt(c.fijR)) + stat("Pendiente", fmt(Math.max(0, c.fijP - c.fijR))); },
   totSubs() { const m = mes(), c = calc(m); return stat("Total mensual", fmt(c.sub)) + stat("Al año", fmt(c.sub * 12)) + stat("Activas", activas(m).length); },
   totVars() { const c = calc(mes()), d = c.varP - c.varR; return stat("Presupuesto", fmt(c.varP)) + stat("Gastado", fmt(c.varR)) + (c.varP > 0 ? stat(d < 0 ? "Te pasaste por" : "Disponible", fmt(Math.abs(d)), d < 0 ? "neg" : "") : ""); },
   movResumen() { const m = mes(), n = m.variables.length; return n ? `${n} ${n === 1 ? "movimiento" : "movimientos"} · ${fmt(calc(m).varR)}` : ""; },
@@ -563,7 +600,7 @@ const Z = {
     const g = gastoCat(m, cat.nombre), p = n0(cat.presupuesto), over = p > 0 && g > p;
     return (p > 0 ? meter(g / p, over) : "") + `Gastado ${fmt(g)}` + (p > 0 ? (over ? ` · te pasaste por ${fmt(g - p)}` : ` · quedan ${fmt(p - g)}`) : "");
   },
-  tarjeta(i) { const t = S.data.tarjetas[i]; return t ? tarjetaVisual(t, mes(), false) : ""; }
+  tarjeta(i) { const t = S.data.tarjetas[i]; return t ? tarjetaVisual(t, false) : ""; }
 };
 function refrescarZonas() { document.querySelectorAll("[data-zone]").forEach(el => { const f = Z[el.dataset.zone]; if (f) el.innerHTML = f(el.dataset.arg !== undefined ? +el.dataset.arg : undefined); }); }
 
@@ -576,25 +613,25 @@ const V = {
     const totalGasto = sum(cats, x => x.valor);
     const uso = c.gasP > 0 ? `<div class="uso">${meter(c.gasR / c.gasP, c.gasR > c.gasP)}<p class="sub">${c.gasR > c.gasP ? `Te pasaste del presupuesto de gastos por ${fmt(c.gasR - c.gasP)}.` : `Has usado ${pct(c.gasR / c.gasP)} de tu presupuesto de gastos; quedan ${fmt(c.gasP - c.gasR)}.`}</p></div>` : "";
     const listaCats = cats.length ? cats.map(x => `<div class="li"><span>${esc(x.nombre)}</span><span class="num">${fmt(x.valor)}</span>${meter(x.valor / totalGasto)}</div>`).join("") : `<div class="empty">Sin gastos todavía.</div>`;
-    const listaFijos = m.fijos.length ? m.fijos.map(f => `<div class="li"><span>${esc(f.nombre || "Sin nombre")}</span><span class="num">${fmt(n0(f.pagado) || n0(f.presupuesto))}</span><small>${n0(f.pagado) ? "Pagado" : "Pendiente"} · día ${n0(f.dia) || 1}</small></div>`).join("") : `<div class="empty">Arriendo, plan de celular, matrícula… <a href="#fijos">Agregar</a></div>`;
+    const listaFijos = m.fijos.length ? [...m.fijos].sort((a, b) => (a.ok ? 1 : 0) - (b.ok ? 1 : 0)).map(f => `<div class="li${f.ok ? " off" : ""}"><span>${esc(f.nombre || "Sin nombre")}</span><span class="num">${fmt(f.presupuesto)}</span><small>${f.ok ? "Pagado" : "Pendiente · día " + (n0(f.dia) || 1)}</small></div>`).join("") : `<div class="empty">Arriendo, plan de celular, matrícula… <a href="#fijos">Agregar</a></div>`;
     const listaSubs = m.suscripciones.length ? m.suscripciones.map(s => `<div class="li${s.activa === false ? " off" : ""}"><span>${esc(s.nombre || "Sin nombre")}</span><span class="num">${n0(s.valor) ? fmt(s.valor) : "—"}</span></div>`).join("") + `<div class="li tot"><span>Total</span><span class="num">${fmt(c.sub)}</span></div>` : `<div class="empty"><a href="#suscripciones">Agregar suscripciones</a></div>`;
-    const tarjetas = S.data.tarjetas.length ? S.data.tarjetas.map(t => tarjetaVisual(t, m, oc)).join("") : `<div class="empty">Aún no tienes tarjetas registradas. <a href="#tarjetas">Agregar</a></div>`;
+    const tarjetas = S.data.tarjetas.length ? S.data.tarjetas.map(t => tarjetaVisual(t, oc)).join("") : `<div class="empty">Aún no tienes tarjetas registradas. <a href="#tarjetas">Agregar</a></div>`;
     const ojo = S.data.tarjetas.length ? `<button class="eye" data-act="ojo" aria-pressed="${oc}" aria-label="${oc ? "Mostrar" : "Ocultar"} los valores de las tarjetas" title="${oc ? "Mostrar" : "Ocultar"} valores">${oc ? ICON.ojoNo : ICON.ojo}</button>` : "";
     return `<div class="grid">
-      <section class="card c4" style="--i:0"><h2>Resumen del mes</h2><table class="sum"><thead><tr><th>Categoría</th><th>Presupuesto</th><th>Real</th><th>Dif.</th></tr></thead><tbody>
+      <section class="card c5 m12" style="--i:0"><h2>Resumen del mes</h2><table class="sum"><thead><tr><th>Categoría</th><th>Presupuesto</th><th>Real</th><th>Dif.</th></tr></thead><tbody>
         ${fila("Ingresos", c.ingP, c.ingR, false)}${fila("Gastos", c.gasP, c.gasR, c.gasR > c.gasP)}
         <tr class="final${c.saldoR < 0 ? " bad" : ""}"><td>Saldo final</td><td class="num">${fmt(c.saldoP)}</td><td class="num">${fmt(c.saldoR)}</td><td></td></tr></tbody></table>${uso}</section>
-      <section class="card c4" style="--i:1"><h2>Presupuesto vs. real</h2>${chartBarras(c)}</section>
-      <section class="card c4" style="--i:2"><h2>Distribución de gastos</h2>${chartDona(cats)}</section>
-      <section class="card c4" style="--i:3"><h2>Flujo de caja</h2><div class="flow">
+      <section class="card c3 m4" style="--i:1"><h2>Presupuesto vs. real</h2>${chartBarras(c)}</section>
+      <section class="card c4 m4" style="--i:2"><h2>Distribución de gastos</h2>${chartDona(cats)}</section>
+      <section class="card c4 m4 s12" style="--i:3"><h2>Flujo de caja</h2><div class="flow">
         <div><span>Saldo inicial</span><span class="num">${fmt(c.ini)}</span></div><div><span>+ Ingresos</span><span class="num">${fmt(c.ingR)}</span></div>
         <div><span>− Gastos</span><span class="num">${fmt(-c.gasR)}</span></div>
         <div class="tot"><span>Saldo final</span><span class="num${c.saldoR < 0 ? " neg" : ""}">${fmt(c.saldoR)}</span></div></div></section>
-      <section class="card c8" style="--i:4"><h2>Evolución del saldo</h2><p class="sub cap">Saldo inicial más ingresos recibidos menos gastos, día a día.</p>${chartLinea(m, S.mes)}</section>
-      <section class="card c3" style="--i:5"><h2>Gastos por categoría</h2><div class="list">${listaCats}</div></section>
-      <section class="card c3" style="--i:6"><h2>Gastos fijos</h2><div class="list">${listaFijos}</div></section>
-      <section class="card c3" style="--i:7"><h2>Suscripciones</h2><div class="list">${listaSubs}</div></section>
-      <section class="card c3" style="--i:8"><h2>Tarjetas de crédito ${ojo}</h2>${tarjetas}</section>
+      <section class="card c8 m12" style="--i:4"><h2>Evolución del saldo</h2><p class="sub cap">Saldo inicial más ingresos recibidos menos gastos, día a día.</p>${chartLinea(m, S.mes)}</section>
+      <section class="card c3 m6" style="--i:5"><h2>Gastos por categoría</h2><div class="list">${listaCats}</div></section>
+      <section class="card c3 m6" style="--i:6"><h2>Gastos fijos</h2><div class="list">${listaFijos}</div></section>
+      <section class="card c3 m6" style="--i:7"><h2>Suscripciones</h2><div class="list">${listaSubs}</div></section>
+      <section class="card c3 m6" style="--i:8"><h2>Tarjetas de crédito ${ojo}</h2>${tarjetas}</section>
     </div>`;
   },
   ingresos() {
@@ -610,13 +647,16 @@ const V = {
       </aside></div></div>`;
   },
   fijos() {
-    const m = mes();
-    return `<div class="wrap">${titulo("Gastos fijos", "Pagos que se repiten cada mes con un valor parecido.")}
+    const m = mes(), F = m.fijos.map((x, i) => ({ x, i })), pend = F.filter(f => !f.x.ok), pag = F.filter(f => f.x.ok);
+    const fila = ({ x, i }) => `<tr><td class="ck"><input class="check" type="checkbox" data-p="m.fijos.${i}.ok" data-t="check" data-re="1" ${x.ok ? "checked" : ""} aria-label="Pagado: ${esc(x.nombre || "gasto")}"></td><td>${inText(`m.fijos.${i}.nombre`, x.nombre, "Ej.: plan de celular")}</td><td>${inText(`m.fijos.${i}.categoria`, x.categoria, "Ej.: Vivienda", 'list="dl-cats"')}</td><td>${inMoney(`m.fijos.${i}.presupuesto`, x.presupuesto)}</td><td>${inDia(`m.fijos.${i}.dia`, x.dia)}</td><td>${btnDel(`m.fijos.${i}`, x.nombre)}</td></tr>`;
+    const tabla = (filas, vacio) => `<div class="scroll"><table class="ed"><thead><tr><th class="ck">Pagado</th><th style="text-align:left">Gasto</th><th style="text-align:left">Categoría</th><th>Valor</th><th>Día</th><th></th></tr></thead><tbody>${filas.map(fila).join("") || `<tr><td colspan="6" class="empty">${vacio}</td></tr>`}</tbody></table></div>`;
+    return `<div class="wrap">${titulo("Gastos fijos", "Pagos que se repiten cada mes. Marca la casilla cuando ya lo pagaste.")}
       <div class="split">
-      <section class="card"><h2>Pagos del mes</h2><div class="scroll"><table class="ed"><thead><tr><th>Gasto</th><th>Categoría</th><th>Presupuesto</th><th>Pagado</th><th>Día</th><th></th></tr></thead><tbody>
-      ${m.fijos.map((x, i) => `<tr><td>${inText(`m.fijos.${i}.nombre`, x.nombre, "Ej.: plan de celular")}</td><td>${inText(`m.fijos.${i}.categoria`, x.categoria, "Ej.: Vivienda", 'list="dl-cats"')}</td><td>${inMoney(`m.fijos.${i}.presupuesto`, x.presupuesto)}</td><td>${inMoney(`m.fijos.${i}.pagado`, x.pagado)}</td><td>${inDia(`m.fijos.${i}.dia`, x.dia)}</td><td>${btnDel(`m.fijos.${i}`, x.nombre)}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">Todavía no hay gastos fijos.</td></tr>`}
-      </tbody></table></div><datalist id="dl-cats">${S.data.categorias.map(c => `<option value="${esc(c)}">`).join("")}</datalist>
-      <div class="foot"><button class="btn" data-act="add" data-k="fijos">+ Agregar gasto fijo</button></div></section>
+      <section class="card"><h2>Pendientes <span class="h2n">${pend.length ? `${pend.length} por pagar` : ""}</span></h2>
+      ${tabla(pend, m.fijos.length ? "Ya pagaste todos los gastos fijos de este mes." : "Todavía no hay gastos fijos.")}
+      <datalist id="dl-cats">${S.data.categorias.map(c => `<option value="${esc(c)}">`).join("")}</datalist>
+      <div class="foot"><button class="btn" data-act="add" data-k="fijos">+ Agregar gasto fijo</button></div>
+      ${pag.length ? `<details class="hechos" data-d="fijos"${S.abiertos.fijos ? " open" : ""}><summary>Pagados (${pag.length})</summary>${tabla(pag, "")}</details>` : ""}</section>
       <aside class="stack"><section class="card"><h2>Resumen</h2><div class="stats" data-zone="totFijos"></div></section></aside>
       </div></div>`;
   },
@@ -631,23 +671,22 @@ const V = {
       </div></div>`;
   },
   variables() {
-    const m = mes(), min = `${S.mes}-01`, max = `${S.mes}-${String(diasDe(S.mes)).padStart(2, "0")}`;
-    const hoy = ymd(new Date()), fecha = S.fechaNueva || (hoy.startsWith(S.mes) ? hoy : min);
+    const m = mes(), hoy = ymd(new Date()), fecha = S.fechaNueva || (hoy.startsWith(S.mes) ? hoy : `${S.mes}-01`);
     const filas = m.variables.map((v, i) => ({ v, i })).sort((a, b) => String(b.v.fecha).localeCompare(String(a.v.fecha)));
     return `<div class="wrap">${titulo("Gastos variables", "Transporte, comida, salidas: lo que cambia de un mes a otro.")}
       <section class="card"><h2>Nuevo gasto</h2>
         <form class="addrow" id="form-var">
-          <label class="field"><span>Fecha</span><input class="in" type="date" name="fecha" value="${fecha}" min="${min}" max="${max}" required></label>
+          <label class="field"><span>Fecha</span><input class="in" type="date" name="fecha" value="${fecha}" required></label>
           <label class="field"><span>Descripción</span><input class="in" type="text" name="descripcion" placeholder="Ej.: MIO, taxi…"></label>
           <label class="field"><span>Categoría</span><select class="in" name="categoria">${opcionesCat(m)}</select></label>
           <label class="field"><span>Pagué con</span><select class="in" name="medio">${opcionesMedio("")}</select></label>
           <label class="field"><span>Valor</span><span class="money"><span>$</span><input class="in" type="text" inputmode="numeric" name="valor" placeholder="0" data-t="money" required></span></label>
           <button class="btn pri" type="submit">Agregar</button>
-        </form></section>
+        </form><p class="sub addnote">Puedes poner una fecha de otro mes: el gasto queda guardado en el mes de su fecha.</p></section>
       <div class="split">
       <section class="card"><h2>Movimientos <span class="h2n" data-zone="movResumen"></span></h2>
         <div class="scroll"><table class="ed mov"><thead><tr><th>Fecha</th><th style="text-align:left">Descripción</th><th style="text-align:left">Categoría</th><th style="text-align:left">Pagué con</th><th>Valor</th><th></th></tr></thead><tbody>
-        ${filas.map(({ v, i }) => `<tr><td><input class="in w-date" type="date" data-p="m.variables.${i}.fecha" data-t="raw" value="${esc(v.fecha)}" min="${min}" max="${max}" aria-label="Fecha"></td><td>${inText(`m.variables.${i}.descripcion`, v.descripcion, "Descripción")}</td><td><select class="in" data-p="m.variables.${i}.categoria" data-t="raw" aria-label="Categoría">${opcionesCat(m, v.categoria)}</select></td><td><select class="in medio" data-p="m.variables.${i}.medio" data-t="raw" aria-label="Medio de pago">${opcionesMedio(v.medio)}</select></td><td>${inMoney(`m.variables.${i}.valor`, v.valor)}</td><td>${btnDel(`m.variables.${i}`, v.descripcion || "movimiento")}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">Aún no registras gastos en ${nombreMes(S.mes)}.</td></tr>`}
+        ${filas.map(({ v, i }) => `<tr><td><input class="in w-date" type="date" data-p="m.variables.${i}.fecha" data-t="raw" value="${esc(v.fecha)}" aria-label="Fecha"></td><td>${inText(`m.variables.${i}.descripcion`, v.descripcion, "Descripción")}</td><td><select class="in" data-p="m.variables.${i}.categoria" data-t="raw" aria-label="Categoría">${opcionesCat(m, v.categoria)}</select></td><td><select class="in medio" data-p="m.variables.${i}.medio" data-t="raw" aria-label="Medio de pago">${opcionesMedio(v.medio)}</select></td><td>${inMoney(`m.variables.${i}.valor`, v.valor)}</td><td>${btnDel(`m.variables.${i}`, v.descripcion || "movimiento")}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">Aún no registras gastos en ${nombreMes(S.mes)}.</td></tr>`}
         </tbody></table></div></section>
       <aside class="stack"><section class="card"><h2>Presupuesto por categoría</h2>
         ${m.categorias.map((c, i) => `<div class="catrow">${inText(`m.categorias.${i}.nombre`, c.nombre, "Categoría", 'data-cat="1" aria-label="Nombre de la categoría"')}${inMoney(`m.categorias.${i}.presupuesto`, c.presupuesto, 'aria-label="Presupuesto"', true)}${btnDel(`m.categorias.${i}`, c.nombre)}<div class="z" data-zone="catFila" data-arg="${i}"></div></div>`).join("") || `<div class="empty">Crea tu primera categoría.</div>`}
@@ -657,12 +696,18 @@ const V = {
   },
   tarjetas() {
     const T = S.data.tarjetas;
-    return `<div class="wrap">${titulo("Tarjetas de crédito", "Actualiza la deuda cuando pagues o cuando llegue el extracto.", true)}
-      <div class="cards">${T.map((t, i) => `<section class="card"><div data-zone="tarjeta" data-arg="${i}"></div>
-        <div class="fields two"><label class="field full"><span>Nombre</span>${inText(`g.tarjetas.${i}.nombre`, t.nombre, "Ej.: Visa Bancolombia")}</label>
-        <label class="field"><span>Cupo total</span>${inMoney(`g.tarjetas.${i}.cupo`, t.cupo, "", true)}</label><label class="field"><span>Deuda actual</span>${inMoney(`g.tarjetas.${i}.deuda`, t.deuda, "", true)}</label>
+    const fila = (c, pagada) => `<label class="cargo"><input class="check" type="checkbox" data-tc="${c.key}|${c.i}" ${pagada ? "checked" : ""} aria-label="Pagada"><span class="f">${fechaCorta(c.v.fecha)}</span><span class="d">${esc(c.v.descripcion || c.v.categoria || "Gasto")}</span><span class="num">${fmt(c.v.valor)}</span></label>`;
+    return `<div class="wrap">${titulo("Tarjetas de crédito", "La deuda de cada tarjeta es la suma de los gastos variables hechos con ella que aún no marcas como pagados.", true)}
+      <div class="cards">${T.map((t, i) => {
+        const C = cargosTC(t.id), pend = C.filter(c => !c.v.pagadoTC), pag = C.filter(c => c.v.pagadoTC);
+        return `<section class="card"><div data-zone="tarjeta" data-arg="${i}"></div>
+        <div class="fields two"><label class="field"><span>Nombre</span>${inText(`g.tarjetas.${i}.nombre`, t.nombre, "Ej.: Visa Bancolombia")}</label><label class="field"><span>Cupo total</span>${inMoney(`g.tarjetas.${i}.cupo`, t.cupo, "", true)}</label>
         <label class="field"><span>Día de corte</span>${inDia(`g.tarjetas.${i}.corte`, t.corte, true)}</label><label class="field"><span>Día de pago</span>${inDia(`g.tarjetas.${i}.pago`, t.pago, true)}</label></div>
-        <div class="foot"><span class="sub">Los gastos variables pagados con esta tarjeta aparecen como “Este mes”.</span><button class="btn" data-act="del" data-p="g.tarjetas.${i}">Eliminar tarjeta</button></div></section>`).join("")}</div>
+        <h3 class="h3"><span>Compras sin pagar</span>${pend.length > 1 ? `<button class="lnk" data-act="tc-todo" data-id="${esc(t.id)}">Marcar todas como pagadas</button>` : ""}</h3>
+        <div class="cargos">${pend.map(c => fila(c, false)).join("") || `<div class="empty">Sin compras pendientes. Las que registres en Gastos variables con esta tarjeta aparecen aquí.</div>`}</div>
+        ${pag.length ? `<details class="hechos" data-d="tc-${esc(t.id)}"${S.abiertos["tc-" + t.id] ? " open" : ""}><summary>Pagadas (${pag.length})</summary><div class="cargos">${pag.map(c => fila(c, true)).join("")}</div></details>` : ""}
+        <div class="foot"><span></span><button class="btn" data-act="del" data-p="g.tarjetas.${i}">Eliminar tarjeta</button></div></section>`;
+      }).join("")}</div>
       ${T.length ? "" : `<section class="card empty">Aún no tienes tarjetas registradas.</section>`}
       <div><button class="btn" data-act="add" data-k="tarjetas">+ Agregar tarjeta</button></div></div>`;
   },
@@ -728,10 +773,6 @@ function renderSave() {
 }
 function render() { renderCal(); renderNav(); renderVista(); refrescarZonas(); renderSave(); }
 function sucio() { S.dirty = true; S.virtual = {}; renderSave(); }
-function reloj() {
-  const d = new Date(), h = d.getHours();
-  $("#clock").innerHTML = `<b><small>${h < 12 ? "AM" : "PM"}</small>${String(h % 12 || 12).padStart(2, "0")}</b><b>${String(d.getMinutes()).padStart(2, "0")}</b>`;
-}
 
 /* ---------- avisos ---------- */
 let toastT = null, deshacer = null;
@@ -779,8 +820,9 @@ function confirmar(el, fin) {
   const t = el.dataset.t, v = leer(el);
   if (fin && t === "money") el.value = v ? miles(v) : "";
   if (fin && t === "day") el.value = v || "";
-  const antes = resolver(el.dataset.p, false).o[resolver(el.dataset.p, false).k];
-  if (antes === v || (antes == null && (v === "" || v === 0 || v === true))) return;
+  const r0 = resolver(el.dataset.p, false), antes = r0.o[r0.k];
+  const base = t === "check" ? (antes == null ? r0.k === "activa" : !!antes) : antes;   // "activa" sin valor cuenta como marcada
+  if (base === v || (antes == null && (v === "" || v === 0))) return;
   const { o, k } = resolver(el.dataset.p, true);
   if (el.dataset.cat) {                           // renombrar una categoría también actualiza sus movimientos
     mesEditable().variables.forEach(x => { if (x.categoria === antes) x.categoria = v; });
@@ -789,6 +831,7 @@ function confirmar(el, fin) {
   }
   if (el.dataset.p.endsWith(".categoria")) registrarCat(v);
   o[k] = v; sucio(); refrescarZonas();
+  if (el.dataset.re) render();                    // la fila cambia de lista (pendientes / pagados)
 }
 document.addEventListener("input", e => {
   const el = e.target; if (!el.dataset || el.dataset.t !== "money") return;
@@ -798,7 +841,18 @@ document.addEventListener("input", e => {
 });
 const esCampo = el => !!(el && el.dataset && el.dataset.p && el.dataset.t);   // los botones de eliminar también llevan data-p
 document.addEventListener("change", e => { if (esCampo(e.target)) confirmar(e.target, true); });
-document.addEventListener("focusout", e => { if (esCampo(e.target) && e.target.isConnected) confirmar(e.target, true); });
+document.addEventListener("focusout", e => {
+  const el = e.target; if (!esCampo(el) || !el.isConnected) return;
+  confirmar(el, true);
+  if (/^m\.variables\.\d+\.fecha$/.test(el.dataset.p) && reubicar()) { sucio(); render(); toast("El gasto pasó al mes de su fecha."); }
+});
+document.addEventListener("toggle", e => { if (e.target.dataset && e.target.dataset.d) S.abiertos[e.target.dataset.d] = e.target.open; }, true);
+document.addEventListener("change", e => {        // casilla "pagada" de una compra con tarjeta
+  const el = e.target; if (!el.dataset || !el.dataset.tc) return;
+  const [key, i] = el.dataset.tc.split("|"), v = S.data.meses[key] && S.data.meses[key].variables[+i]; if (!v) return;
+  const on = el.checked, poner = x => { if (x) v.pagadoTC = true; else delete v.pagadoTC; sucio(); render(); };
+  poner(on); toast(on ? "Marcada como pagada." : "Devuelta a pendientes.", { undo: () => poner(!on) });
+});
 document.addEventListener("focusin", e => { if (e.target.dataset && e.target.dataset.t === "money") e.target.select(); });
 document.addEventListener("keydown", e => { if (e.key === "Enter" && esCampo(e.target)) e.target.blur(); });
 document.addEventListener("submit", e => {
@@ -809,24 +863,26 @@ document.addEventListener("submit", e => {
     S.data.ahorros.push({ id: uid(), fecha: String(f.get("fecha")) || ymd(new Date()), valor, nota: String(f.get("nota")).trim() });
     sucio(); render(); guardar(true); return;
   }
-  const m = mesEditable(), categoria = String(f.get("categoria") || "Otros");
+  const fecha = String(f.get("fecha")), key = /^\d{4}-\d{2}-\d{2}$/.test(fecha) ? fecha.slice(0, 7) : S.mes;
+  const m = mesDe(key), categoria = String(f.get("categoria") || "Otros");
   registrarCat(categoria);
-  m.variables.push({ id: uid(), fecha: String(f.get("fecha")), descripcion: String(f.get("descripcion")).trim(), categoria, medio: String(f.get("medio")), valor });
-  S.fechaNueva = String(f.get("fecha")); sucio(); render();
+  m.variables.push({ id: uid(), fecha, descripcion: String(f.get("descripcion")).trim(), categoria, medio: String(f.get("medio")), valor });
+  S.fechaNueva = fecha; sucio(); render();
+  if (key !== S.mes) toast(`Guardado en ${nombreMes(key)} de ${partes(key).y}.`);
   const d = $('#form-var [name="descripcion"]'); if (d) d.focus();
 });
 const NUEVOS = {
   ingresos: () => ({ id: uid(), nombre: "", esperado: 0, recibido: 0, dia: 1 }),
-  fijos: () => ({ id: uid(), nombre: "", categoria: "", presupuesto: 0, pagado: 0, dia: 1 }),
+  fijos: () => ({ id: uid(), nombre: "", categoria: "", presupuesto: 0, dia: 1, ok: false }),
   suscripciones: () => ({ id: uid(), nombre: "", valor: 0, dia: 1, nota: "", activa: true }),
   categorias: () => ({ nombre: "", presupuesto: 0 }),
-  tarjetas: () => ({ id: uid(), nombre: "", cupo: 0, deuda: 0, corte: 0, pago: 0 })
+  tarjetas: () => ({ id: uid(), nombre: "", cupo: 0, corte: 0, pago: 0 })
 };
 document.addEventListener("click", e => {
   const b = e.target instanceof Element ? e.target.closest("[data-act]") : null; if (!b) return;
   const a = b.dataset.act;
-  if (a === "mes") { S.mes = mover(S.mes, +b.dataset.d); S.fechaNueva = null; render(); }
-  else if (a === "hoy") { S.mes = ym(new Date()); S.fechaNueva = null; render(); }
+  if (a === "mes") { reubicar(); S.mes = mover(S.mes, +b.dataset.d); S.fechaNueva = null; render(); }
+  else if (a === "hoy") { reubicar(); S.mes = ym(new Date()); S.fechaNueva = null; render(); }
   else if (a === "dia") { S.fechaNueva = `${S.mes}-${String(b.dataset.d).padStart(2, "0")}`; if (S.vista === "variables") render(); else location.hash = "variables"; }
   else if (a === "add") {
     const k = b.dataset.k, global = k === "tarjetas", arr = (global ? S.data : mesEditable())[k];
@@ -839,6 +895,11 @@ document.addEventListener("click", e => {
     toast("Eliminado.", { undo: () => { o.splice(i, 0, item); sucio(); render(); } });
   }
   else if (a === "ojo") { S.ui.ocultarTC = !S.ui.ocultarTC; try { localStorage.setItem(UI_KEY, JSON.stringify(S.ui)); } catch { /* sin almacenamiento */ } renderVista(); refrescarZonas(); const o = $(".eye"); if (o) o.focus(); }
+  else if (a === "tc-todo") {
+    const pend = cargosTC(b.dataset.id).filter(c => !c.v.pagadoTC).map(c => c.v);
+    pend.forEach(v => { v.pagadoTC = true; }); sucio(); render();
+    toast(`${pend.length} compras marcadas como pagadas.`, { undo: () => { pend.forEach(v => { delete v.pagadoTC; }); sucio(); render(); } });
+  }
   else if (a === "deshacer") { if (deshacer) { const f = deshacer; deshacer = null; $("#toast").classList.remove("show"); f(); } }
   else if (a === "guardar") guardar();
   else if (a === "conectar") conectar();
@@ -885,7 +946,7 @@ async function guardar(sinNavegar) {
     if (sinNavegar) toast("Agregado, pero falta conectar GitHub en Ajustes para guardarlo."); else { toast("Conecta GitHub en Ajustes para poder guardar."); location.hash = "ajustes"; }
     return;
   }
-  S.saving = true; renderSave();
+  reubicar(); S.saving = true; renderSave();
   const previo = S.data.actualizado;
   try {
     let sha = null;
@@ -936,10 +997,10 @@ async function cargar() {
 
 /* ---------- arranque ---------- */
 function ruta() { let h = location.hash.slice(1); if (h === "metas") h = "ahorros"; S.vista = V[h] ? h : "panel"; }
-addEventListener("hashchange", () => { ruta(); render(); scrollTo({ top: 0 }); });
+addEventListener("hashchange", () => { if (S.data) reubicar(); ruta(); render(); scrollTo({ top: 0 }); });
 addEventListener("beforeunload", e => { if (S.dirty) { e.preventDefault(); e.returnValue = ""; } });
 (async function () {
-  cargarCfg(); ruta(); reloj(); setInterval(reloj, 15000);
+  cargarCfg(); ruta();
   await cargar(); render();
 })();
 </script>
