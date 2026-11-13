@@ -3,15 +3,9 @@
   "categorias": [
     "Suscripciones",
     "Transporte",
-    "Educación"
-  ],
-  "metas": [
-    {
-      "id": "57vxdf8",
-      "nombre": "Fondo de emergencia",
-      "actual": 0,
-      "objetivo": 0
-    }
+    "Educación",
+    "Casa",
+    "TC"
   ],
   "tarjetas": [
     {
@@ -25,17 +19,34 @@
     {
       "id": "0oq44em",
       "nombre": "Credito casa",
-      "cupo": 0,
-      "deuda": 0,
-      "corte": 0,
-      "pago": 0
+      "cupo": 8500000,
+      "deuda": 8500000,
+      "corte": 1,
+      "pago": 16
     }
   ],
   "meses": {
     "2026-11": {
       "saldoInicial": 0,
       "ingresos": [],
-      "fijos": [],
+      "fijos": [
+        {
+          "id": "ycyvskv",
+          "nombre": "Cuota de manejo master",
+          "categoria": "TC",
+          "presupuesto": 18495,
+          "pagado": 0,
+          "dia": 16
+        },
+        {
+          "id": "82ydib4",
+          "nombre": "",
+          "categoria": "",
+          "presupuesto": 0,
+          "pagado": 0,
+          "dia": 1
+        }
+      ],
       "suscripciones": [
         {
           "id": "s1",
@@ -90,14 +101,41 @@
         {
           "nombre": "Transporte",
           "presupuesto": 0
+        },
+        {
+          "nombre": "Casa",
+          "presupuesto": 0
+        },
+        {
+          "nombre": "TC",
+          "presupuesto": 0
         }
       ],
-      "variables": [],
-      "ahorro": {
-        "presupuesto": 0,
-        "real": 0
-      }
+      "variables": [
+        {
+          "id": "cquz5hh",
+          "fecha": "2026-11-01",
+          "descripcion": "Estante IKEA",
+          "categoria": "Casa",
+          "medio": "di0sauk",
+          "valor": 79000
+        }
+      ]
     }
   },
-  "actualizado": "2026-11-12T21:06:20.290Z"
+  "actualizado": "2026-11-13T01:32:57.282Z",
+  "ahorros": [
+    {
+      "id": "hsn6ute",
+      "fecha": "2026-11-12",
+      "valor": 5000000,
+      "nota": "Uni"
+    },
+    {
+      "id": "rnhn7k1",
+      "fecha": "2026-11-12",
+      "valor": 500000,
+      "nota": "Abonos casa"
+    }
+  ]
 }
