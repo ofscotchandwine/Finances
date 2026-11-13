@@ -4,7 +4,8 @@
     "Suscripciones",
     "Transporte",
     "Educación",
-    "Casa"
+    "Casa",
+    "TC"
   ],
   "tarjetas": [
     {
@@ -28,7 +29,24 @@
     "2026-11": {
       "saldoInicial": 0,
       "ingresos": [],
-      "fijos": [],
+      "fijos": [
+        {
+          "id": "ycyvskv",
+          "nombre": "Cuota de manejo master",
+          "categoria": "TC",
+          "presupuesto": 18495,
+          "pagado": 0,
+          "dia": 16
+        },
+        {
+          "id": "82ydib4",
+          "nombre": "",
+          "categoria": "",
+          "presupuesto": 0,
+          "pagado": 0,
+          "dia": 1
+        }
+      ],
       "suscripciones": [
         {
           "id": "s1",
@@ -101,7 +119,7 @@
       ]
     }
   },
-  "actualizado": "2026-11-13T01:27:35.933Z",
+  "actualizado": "2026-11-13T01:31:58.940Z",
   "ahorros": [
     {
       "id": "hsn6ute",
