@@ -105,6 +105,10 @@
         {
           "nombre": "Casa",
           "presupuesto": 0
+        },
+        {
+          "nombre": "TC",
+          "presupuesto": 0
         }
       ],
       "variables": [
@@ -119,7 +123,7 @@
       ]
     }
   },
-  "actualizado": "2026-11-13T01:31:58.940Z",
+  "actualizado": "2026-11-13T01:32:57.282Z",
   "ahorros": [
     {
       "id": "hsn6ute",
