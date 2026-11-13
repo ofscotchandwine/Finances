@@ -59,10 +59,19 @@
         },
         {
           "id": "82ydib4",
-          "nombre": "",
-          "categoria": "",
-          "presupuesto": 0,
-          "dia": 1
+          "nombre": "Ahorro U",
+          "categoria": "Educación",
+          "presupuesto": 1000000,
+          "dia": 26,
+          "ok": true
+        },
+        {
+          "id": "aep2lyr",
+          "nombre": "Pagar U",
+          "categoria": "Educación",
+          "presupuesto": 2800000,
+          "dia": 1,
+          "ok": true
         }
       ],
       "suscripciones": [
@@ -141,25 +150,13 @@
       ]
     }
   },
-  "actualizado": "2026-11-13T03:07:56.996Z",
+  "actualizado": "2026-11-13T03:09:45.494Z",
   "ahorros": [
-    {
-      "id": "hsn6ute",
-      "fecha": "2026-11-12",
-      "valor": 5000000,
-      "nota": "Uni"
-    },
     {
       "id": "rnhn7k1",
       "fecha": "2026-11-12",
       "valor": 500000,
       "nota": "Abonos casa"
-    },
-    {
-      "id": "grchjfh",
-      "fecha": "2026-11-12",
-      "valor": 5000000,
-      "nota": "Uni"
     },
     {
       "id": "t6taebm",
